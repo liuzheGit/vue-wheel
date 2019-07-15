@@ -16,10 +16,10 @@
     border: 1px solid var(--border-color)
     border-radius: var(--border-radius)
     padding: 0 1em
-    .&:hover
+    &:hover
       border-color: var(--border-color-hover)
-    .&:active
+    &:active
       background-color: var(--button-active-bg)
-    .&:focus
+    &:focus
       outline: none
 </style>
