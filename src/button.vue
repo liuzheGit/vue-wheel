@@ -12,7 +12,16 @@
 <script>
   export default {
     name: "z-button",
-    props: ['icon', 'iconPosition']
+    props: {
+      icon: {},
+      iconPosition: {
+        type: String,
+        default: 'left',
+        validate(value) {
+          return !(value !== 'left' && value !== 'right');
+        }
+      }
+    }
   }
 </script>
 
@@ -28,18 +37,21 @@
     justify-content: center
     align-items: center
     vertical-align: top
+
     .icon
       order: 1
       margin-right: .3em
+
     .content
       order: 2
+
     &.icon-right
       .icon
         order: 2
         margin-left: .3em
+
       .content
         order: 1
-
 
 
     &:hover
