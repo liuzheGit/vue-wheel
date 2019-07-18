@@ -18,7 +18,10 @@ new Vue({
 
 // 单元测试
 import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies);
 const expect = chai.expect
+
 
 const Constructor = Vue.extend(button)
 // icon属性测试
@@ -86,10 +89,10 @@ const Constructor = Vue.extend(button)
   });
   vm.$mount();
   // 这里是监听
-  vm.$on('click',function () {
-    console.log('1')
-  });
+  let spy = chai.spy(function () {})
+  vm.$on('click', spy);
   let button = vm.$el;
   /* 这里是模拟点击 */
   button.click()
+  expect(spy).to.have.been.called();
 }
