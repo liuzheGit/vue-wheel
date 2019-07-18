@@ -8,6 +8,8 @@ new Vue({
   el: '#app',
   data: {
     msg: 'hello',
-    up: 'up'
+    up: 'up',
+    loading1: true,
+    loading2: false
   }
 });
