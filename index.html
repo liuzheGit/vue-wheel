@@ -9,6 +9,10 @@
       padding: 0;
       box-sizing: border-box;
     }
+    .icon{
+      width: 1em;
+      height: 1em;
+    }
     :root{
       --button-height: 32px;
       --font-size: 14px;
@@ -26,9 +30,11 @@
 </head>
 <body>
 <div id="app">
-  <h3>{{msg}}</h3>
-  <z-button></z-button>
+  <z-button icon="setting" icon-position="right">你好</z-button>
+  <z-button icon="setting" icon-position="cc">你好</z-button>
+  <z-button>你好</z-button>
 </div>
+<script src="//at.alicdn.com/t/font_1296716_zqgupsiq2je.js"></script>
 <script src="./src/app.js"></script>
 </body>
 </html>
