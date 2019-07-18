@@ -23,25 +23,25 @@ const expect = chai.expect
 const Constructor = Vue.extend(button)
 // icon属性测试
 {
-  let button1 = new Constructor({
+  let vm = new Constructor({
     propsData: {
       icon: 'setting'
     }
   });
-  button1.$mount()
-  let useComponent = button1.$el.querySelector('use');
+  vm.$mount()
+  let useComponent = vm.$el.querySelector('use');
   expect(useComponent.getAttribute('xlink:href')).to.eq('#i-setting')
 }
 // loading属性测试
 {
-  let button1 = new Constructor({
+  let vm = new Constructor({
     propsData: {
       icon: 'setting',
       loading: true
     }
   });
-  button1.$mount()
-  let useComponent = button1.$el.querySelector('use');
+  vm.$mount()
+  let useComponent = vm.$el.querySelector('use');
   let href = useComponent.getAttribute('xlink:href')
   expect(href).to.eq('#i-loading')
 }
@@ -49,31 +49,47 @@ const Constructor = Vue.extend(button)
 {
   let div = document.createElement('div');
   document.body.appendChild(div);
-  let button = new Constructor({
+  let vm = new Constructor({
     propsData: {
       icon: 'setting',
       iconPosition: 'right'
     }
   });
-  button.$mount(div);
-  let svg = button.$el.querySelector('svg');
+  vm.$mount(div);
+  let svg = vm.$el.querySelector('svg');
   let {order} = window.getComputedStyle(svg);
   expect(order).to.eq('2')
-  button.$el.remove();
-  button.$destroy()
+  vm.$el.remove();
+  vm.$destroy()
 }
 {
   let div = document.createElement('div');
   document.body.appendChild(div);
-  let button = new Constructor({
+  let vm = new Constructor({
     propsData: {
       icon: 'setting'
     }
   });
-  button.$mount(div);
-  let svg = button.$el.querySelector('svg');
+  vm.$mount(div);
+  let svg = vm.$el.querySelector('svg');
   let {order} = window.getComputedStyle(svg);
   expect(order).to.eq('1')
-  button.$el.remove();
-  button.$destroy()
+  vm.$el.remove();
+  vm.$destroy()
+}
+// click测试
+{
+  let vm = new Constructor({
+    propsData: {
+      icon: 'setting'
+    }
+  });
+  vm.$mount();
+  // 这里是监听
+  vm.$on('click',function () {
+    console.log('1')
+  });
+  let button = vm.$el;
+  /* 这里是模拟点击 */
+  button.click()
 }
