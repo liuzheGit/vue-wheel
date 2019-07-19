@@ -22,19 +22,37 @@
     #app{
       margin: 40px;
     }
+    .section{
+      margin: 20px 5px;
+    }
+    .section h3{
+      margin: 10px 0;
+    }
   </style>
 </head>
 <body>
 <div id="app">
-  <z-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">你好</z-button>
-  <z-button icon="setting">你好</z-button>
-  <z-button :loading="loading1" @click="loading1 = !loading1">加载中</z-button>
-  <z-button>你好</z-button>
-  <z-button-group>
-    <z-button icon="left">上一页</z-button>
-    <z-button>中间</z-button>
-    <z-button icon="right">下一页</z-button>
-  </z-button-group>
+  <div class="section">
+    <h3>输入框</h3>
+    <z-input value="normal"></z-input>
+    <z-input value="disabled" disabled></z-input>
+    <z-input value="readonly" readonly></z-input>
+    <br>
+    <br>
+    <z-input value="事件" @input="inputEvent" error="内容必须大于6个字符"></z-input>
+  </div>
+  <div class="section">
+    <h3>按钮</h3>
+    <z-button icon="setting" icon-position="right" :loading="loading2" @click="loading2 = !loading2">你好</z-button>
+    <z-button icon="setting">你好</z-button>
+    <z-button :loading="loading1" @click="loading1 = !loading1">加载中</z-button>
+    <z-button>你好</z-button>
+    <z-button-group>
+      <z-button icon="left">上一页</z-button>
+      <z-button>中间</z-button>
+      <z-button icon="right">下一页</z-button>
+    </z-button-group>
+  </div>
 </div>
 <script src="./src/app.js"></script>
 </body>

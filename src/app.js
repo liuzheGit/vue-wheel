@@ -2,11 +2,13 @@ import Vue from 'vue'
 import button from './button'
 import icon from './icon'
 import buttonGroup from './button-group'
+import input from './input'
 import './iconfont-svg'
 
 Vue.component('z-button', button);
 Vue.component('z-icon', icon);
 Vue.component('z-button-group', buttonGroup);
+Vue.component('z-input', input);
 new Vue({
   el: '#app',
   data: {
@@ -14,6 +16,11 @@ new Vue({
     up: 'up',
     loading1: true,
     loading2: false
+  },
+  methods: {
+    inputEvent(event){
+      console.log(event.target.value)
+    }
   }
 });
 
