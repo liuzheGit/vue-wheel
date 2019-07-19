@@ -1,7 +1,7 @@
 {
-  "name": "vue-wheel",
+  "name": "vue-wheel-z",
   "version": "0.0.1",
-  "description": "vue, UI",
+  "description": "a simple vue UI component",
   "main": "index.js",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
