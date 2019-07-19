@@ -14,8 +14,12 @@
 </template>
 
 <script>
+  import icon from './icon'
   export default {
     name: "zInput",
+    components: {
+      'z-icon': icon
+    },
     props: {
       value: {
         type: String
