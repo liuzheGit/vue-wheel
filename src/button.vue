@@ -9,8 +9,12 @@
 </template>
 
 <script>
+  import icon from './icon'
   export default {
     name: "z-button",
+    components: {
+      'z-icon': icon
+    },
     props: {
       icon: {},
       loading: {

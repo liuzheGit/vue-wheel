@@ -17,11 +17,8 @@
            }
          })
          vm.$mount();
-         console.log(vm.$el)
          const useElement = vm.$el.querySelector('use')
-         console.log(useElement)
          expect(useElement.getAttribute('xlink:href')).to.equal('#i-setting')
-         // vm.$destroy()
      })
      it('可以设置loading.', () => {
          const vm = new Constructor({
