@@ -2,6 +2,7 @@ import Vue from 'vue'
 import button from './button'
 import icon from './icon'
 import buttonGroup from './button-group'
+import './iconfont-svg'
 
 Vue.component('z-button', button);
 Vue.component('z-icon', icon);

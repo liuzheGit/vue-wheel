@@ -26,6 +26,7 @@
   "homepage": "https://github.com/liuzheGit/vue-wheel#readme",
   "dependencies": {
     "de-indent": "^1.0.2",
+    "svg": "^0.1.0",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
   },
