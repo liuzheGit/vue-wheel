@@ -18,9 +18,6 @@
       },
       offset: {
         type: [Number, String]
-      },
-      gutter: {
-        type: [Number, String]
       }
     },
     computed: {
@@ -35,8 +32,6 @@
           paddingRight: this.gutter / 2 + 'px'
         }
       }
-    },
-    mounted() {
     }
   }
 </script>
