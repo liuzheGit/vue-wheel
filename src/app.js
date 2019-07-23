@@ -3,8 +3,8 @@ import button from './button'
 import icon from './icon'
 import buttonGroup from './button-group'
 import input from './input'
-import row from './row'
-import col from './col'
+import row from './grid/row'
+import col from './grid/col'
 
 import './iconfont-svg'
 
