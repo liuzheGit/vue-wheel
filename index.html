@@ -32,11 +32,29 @@
 </head>
 <body>
 <style>
+  /* grid的展示样式 */
   .box{
     border: 1px solid purple;
   }
 </style>
+<style>
+  .demo{
+    border: 1px solid rosybrown;
+    min-height: 100px;
+  }
+</style>
 <div id="app">
+  <div class="section">
+    <h3>layout</h3>
+    <z-layout style="height: 800px">
+      <z-aside class="demo">aside</z-aside>
+      <z-layout>
+        <z-header class="demo">header</z-header>
+        <z-content class="demo">content</z-content>
+        <z-footer class="demo">footer</z-footer>
+      </z-layout>
+    </z-layout>
+  </div>
   <div class="section" style="border: 1px solid green;">
     <h3>grid的 row 和 col</h3>
     <z-row gutter="20" align="center">

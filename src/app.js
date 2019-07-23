@@ -5,6 +5,11 @@ import buttonGroup from './button-group'
 import input from './input'
 import row from './grid/row'
 import col from './grid/col'
+import layout from './layout'
+import content from './content'
+import header from './header'
+import footer from './footer'
+import aside from './aside'
 
 import './iconfont-svg'
 
@@ -14,6 +19,12 @@ Vue.component('z-button-group', buttonGroup);
 Vue.component('z-input', input);
 Vue.component('z-row', row);
 Vue.component('z-col', col);
+
+Vue.component('z-layout', layout)
+Vue.component('z-content', content)
+Vue.component('z-header', header)
+Vue.component('z-footer', footer)
+Vue.component('z-aside', aside)
 new Vue({
   el: '#app',
   data: {
