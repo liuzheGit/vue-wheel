@@ -25,6 +25,11 @@ Vue.component('z-content', content)
 Vue.component('z-header', header)
 Vue.component('z-footer', footer)
 Vue.component('z-aside', aside)
+
+
+// Toast
+import plugin from './plugin'
+Vue.use(plugin);
 new Vue({
   el: '#app',
   data: {
@@ -36,6 +41,9 @@ new Vue({
   methods: {
     inputEvent(event){
       console.log(event.target.value)
+    },
+    showToast(){
+      this.$toast('我是toast')
     }
   }
 });
