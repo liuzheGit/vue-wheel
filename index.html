@@ -39,18 +39,8 @@
 <div id="app">
   <div class="section" style="border: 1px solid green;">
     <h3>grid的 row 和 col</h3>
-    <z-row gutter="20">
-      <z-col :pad="{'span': 12}" :pc="{'span': 8}"> <div class="box">box</div> </z-col>
-      <z-col :pad="{'span': 12}" :pc="{'span': 16}"> <div class="box">box</div> </z-col>
-    </z-row>
-    <z-row>
-      <z-col span="24" :pad="{span: 8}" :pc="{span: 7}"><div class="box">box</div></z-col>
-      <z-col span="24" :pad="{span: 4, offset: 4}" :pc="{span: 10, offset: 1}"><div class="box">box</div></z-col>
-      <z-col span="24" :pad="{span: 8}" :pc="{span: 6}"><div class="box">box</div></z-col>
-    </z-row>
-    <z-row gutter="30">
-      <z-col span="4"><div class="box">4</div></z-col>
-      <z-col span="20"><div class="box">20</div></z-col>
+    <z-row gutter="20" align="center">
+      <z-col :pc="{span: 12}"> <div class="box">box</div> </z-col>
     </z-row>
   </div>
   <div class="section">
