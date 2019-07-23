@@ -3,12 +3,17 @@ import button from './button'
 import icon from './icon'
 import buttonGroup from './button-group'
 import input from './input'
+import row from './row'
+import col from './col'
+
 import './iconfont-svg'
 
 Vue.component('z-button', button);
 Vue.component('z-icon', icon);
 Vue.component('z-button-group', buttonGroup);
 Vue.component('z-input', input);
+Vue.component('z-row', row);
+Vue.component('z-col', col);
 new Vue({
   el: '#app',
   data: {

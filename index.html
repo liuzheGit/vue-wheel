@@ -31,7 +31,36 @@
   </style>
 </head>
 <body>
+<style>
+  .box{
+    border: 1px solid purple;
+  }
+</style>
 <div id="app">
+  <div class="section" style="border: 1px solid green;">
+    <h3>grid的 row 和 col</h3>
+    <z-row gutter="20">
+      <z-col gutter="20">
+        <div class="box">box</div>
+      </z-col>
+      <z-col gutter="20">
+        <div class="box">box</div>
+      </z-col>
+    </z-row>
+    <z-row>
+      <z-col span="4">1</z-col>
+      <z-col span="20">2</z-col>
+    </z-row>
+    <z-row>
+      <z-col span="8">1</z-col>
+      <z-col span="8" offset="8">1</z-col>
+    </z-row>
+    <z-row>
+      <z-col span="4" offset="3">1</z-col>
+      <z-col span="4" offset="3">1</z-col>
+      <z-col span="10">1</z-col>
+    </z-row>
+  </div>
   <div class="section">
     <h3>输入框</h3>
     <z-input value="normal"></z-input>
@@ -40,8 +69,8 @@
     <br>
     <br>
     <z-input value="事件" @input="inputEvent" error="内容必须大于6个字符"></z-input>
-    <hr>
-    <hr>
+    <br>
+    <br>
     <z-input v-model="msg"></z-input>
     <span>{{msg}}</span>
   </div>
