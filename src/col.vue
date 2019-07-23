@@ -51,7 +51,7 @@
         return [
           ...createClass({span, offset}),
           ...createClass(pad, 'pad-'),
-          ...createClass(narrowPc, 'norrow-pc-'),
+          ...createClass(narrowPc, 'narrow-pc-'),
           ...createClass(pc, 'pc-'),
           ...createClass(widePc, 'wide-pc-')
         ]
