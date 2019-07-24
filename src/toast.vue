@@ -5,7 +5,7 @@
         <slot></slot>
       </div>
       <div v-else class="content" v-html="$slots.default[0]"></div>
-      <span class="button" v-if="closeButton" @click="onClickClose">{{closeButton.text}}</span>
+      <span class="close" v-if="closeButton" @click="onClickClose">{{closeButton.text}}</span>
     </div>
   </div>
 </template>
@@ -16,7 +16,7 @@
     props: {
       autoClose: {
         type: [Boolean, Number],
-        default: 5,
+        default: 3,
         validator(value){
           return value === false || typeof value === 'number'
         }
@@ -38,7 +38,7 @@
         type: String,
         default: 'top',
         validator(value) {
-          return ['top', 'button', 'middle'].indexOf(value) >= 0
+          return ['top', 'bottom', 'middle'].indexOf(value) >= 0
         }
       }
     },
@@ -120,7 +120,7 @@
     display: flex; align-items: center;
     .content { border-right: 1px solid #666; padding: 4px 16px; align-self: stretch;
       display: flex; align-items: center; }
-    .button { cursor: pointer; flex-shrink: 0; align-self: stretch; padding: 0 16px; display: flex;
+    .close { cursor: pointer; flex-shrink: 0; align-self: stretch; padding: 0 16px; display: flex;
       align-items: center; }
   }
 </style>

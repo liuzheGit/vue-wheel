@@ -63,7 +63,6 @@ describe('col', () => {
                 }
             }
         }).$mount(div);
-        console.log(vm.$el.classList)
         expect(vm.$el.classList.contains('col-narrow-pc-2')).to.eq(true);
         div.remove();
         vm.$destroy()
