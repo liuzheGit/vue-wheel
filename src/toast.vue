@@ -76,24 +76,52 @@
 </script>
 
 <style scoped lang="scss">
-  @keyframes fadeIn {
+  $font-size: 14px;
+  $toast-min-height: 40px;
+  $toast-bg: rgba(0, 0, 0, 0.75);
+  $duration-time: 300ms;
+  @keyframes slide-up {
     0%{opacity: 0; transform: translateY(100%)}
     100%{opacity: 1; transform: translateY(0%)}
   }
-  $font-size: 14px;
-  $toast-min-height: 40px;
-
-  $toast-bg: rgba(0, 0, 0, 0.75);
+  @keyframes slide-down {
+    0%{opacity: 0; transform: translateY(-100%)}
+    100%{opacity: 1; transform: translateY(0%)}
+  }
+  @keyframes fade-in {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
   .toast-wrap{
     position: fixed; left: 50%;
     transform: translateX(-50%);
-    &.position-top{ top: 10px; }
-    &.position-middle{ top: 50%; transform: translate(-50%, -50%);}
-    &.position-bottom{ bottom: 10px; }
+    &.position-top{
+      top: 0;
+      .toast{
+        animation: slide-down $duration-time;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+    &.position-middle{
+      top: 50%;
+      transform: translate(-50%, -50%);
+      .toast{
+        animation: fade-in $duration-time;
+      }
+    }
+    &.position-bottom{
+      bottom: 0;
+      .toast{
+        animation: slide-up $duration-time;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
   }
   .toast { color: white; font-size: $font-size; min-height: $toast-min-height; line-height: 1.8;
     background: $toast-bg; border-radius: 4px; box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
-    display: flex; align-items: center; animation: fadeIn 1s;
+    display: flex; align-items: center;
     .content { border-right: 1px solid #666; padding: 4px 16px; align-self: stretch;
       display: flex; align-items: center; }
     .button { cursor: pointer; flex-shrink: 0; align-self: stretch; padding: 0 16px; display: flex;

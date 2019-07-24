@@ -43,10 +43,19 @@ new Vue({
     inputEvent(event) {
       console.log(event.target.value)
     },
-    showToast() {
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
+    },
+    showToast(value) {
       this.$toast('我是toast', {
         closeButton: { text: '关闭'},
-        position: 'bottom'
+        position: value
       })
     }
   }
