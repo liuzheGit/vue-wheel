@@ -46,7 +46,7 @@ new Vue({
     showToast() {
       this.$toast('我是toast', {
         closeButton: { text: '关闭'},
-        position: 'middle'
+        position: 'bottom'
       })
     }
   }

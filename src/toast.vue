@@ -1,10 +1,12 @@
 <template>
-  <div class="toast" :class="toastClasses">
-    <div v-if="!enableHtml" class="content">
-      <slot></slot>
+  <div class="toast-wrap" :class="toastClasses">
+    <div class="toast">
+      <div v-if="!enableHtml" class="content">
+        <slot></slot>
+      </div>
+      <div v-else class="content" v-html="$slots.default[0]"></div>
+      <span class="button" v-if="closeButton" @click="onClickClose">{{closeButton.text}}</span>
     </div>
-    <div v-else class="content" v-html="$slots.default[0]"></div>
-    <span class="button" v-if="closeButton" @click="onClickClose">{{closeButton.text}}</span>
   </div>
 </template>
 
@@ -74,16 +76,24 @@
 </script>
 
 <style scoped lang="scss">
+  @keyframes fadeIn {
+    0%{opacity: 0; transform: translateY(100%)}
+    100%{opacity: 1; transform: translateY(0%)}
+  }
   $font-size: 14px;
   $toast-min-height: 40px;
+
   $toast-bg: rgba(0, 0, 0, 0.75);
-  .toast { color: white; font-size: $font-size; min-height: $toast-min-height; line-height: 1.8;
-    background: $toast-bg; border-radius: 4px; box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
-    display: flex; align-items: center; position: fixed; left: 50%;
+  .toast-wrap{
+    position: fixed; left: 50%;
     transform: translateX(-50%);
     &.position-top{ top: 10px; }
-    &.position-middle{ top: 50%; }
+    &.position-middle{ top: 50%; transform: translate(-50%, -50%);}
     &.position-bottom{ bottom: 10px; }
+  }
+  .toast { color: white; font-size: $font-size; min-height: $toast-min-height; line-height: 1.8;
+    background: $toast-bg; border-radius: 4px; box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
+    display: flex; align-items: center; animation: fadeIn 1s;
     .content { border-right: 1px solid #666; padding: 4px 16px; align-self: stretch;
       display: flex; align-items: center; }
     .button { cursor: pointer; flex-shrink: 0; align-self: stretch; padding: 0 16px; display: flex;
