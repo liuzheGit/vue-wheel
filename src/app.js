@@ -29,6 +29,7 @@ Vue.component('z-aside', aside)
 
 // Toast
 import plugin from './plugin'
+
 Vue.use(plugin);
 new Vue({
   el: '#app',
@@ -39,21 +40,13 @@ new Vue({
     loading2: false
   },
   methods: {
-    inputEvent(event){
+    inputEvent(event) {
       console.log(event.target.value)
     },
-    showToast(){
-      this.$toast('<p>多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字<strong>加粗</strong></p>', {
-        propsData: {
-          closeButton: {
-            text: '知道了111',
-            callback(toast){
-              console.log('用户说它知道了111');
-              toast.log()
-            }
-          },
-          enableHtml: true
-        }
+    showToast() {
+      this.$toast('我是toast', {
+        closeButton: { text: '关闭'},
+        position: 'middle'
       })
     }
   }
@@ -62,6 +55,7 @@ new Vue({
 // 单元测试
 import chai from 'chai'
 import spies from 'chai-spies'
+
 chai.use(spies);
 const expect = chai.expect
 
@@ -132,7 +126,8 @@ const Constructor = Vue.extend(button)
   });
   vm.$mount();
   // 这里是监听
-  let spy = chai.spy(function () {})
+  let spy = chai.spy(function () {
+  })
   vm.$on('click', spy);
   let button = vm.$el;
   /* 这里是模拟点击 */
