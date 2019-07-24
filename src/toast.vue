@@ -61,6 +61,7 @@
         this.$emit('beforeClose');
         this.$destroy()
       },
+      log(){ console.log('组件内部的log') },
       onClickClose() {
         this.close();
         if (this.closeButton && typeof this.closeButton.callback === 'function') {
