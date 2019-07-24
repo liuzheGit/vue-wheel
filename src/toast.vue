@@ -1,6 +1,9 @@
 <template>
   <div class="toast">
-    <slot></slot>
+    <div class="content">
+      <slot></slot>
+    </div>
+    <span class="button" v-if="closeButton" @click="onClickClose">{{closeButton.text}}</span>
   </div>
 </template>
 
@@ -14,7 +17,18 @@
       },
       autoCloseDelay: {
         type: Number,
-        default: 3
+        default: 300
+      },
+      closeButton: {
+        type: Object,
+        default: ()=>{
+          return {
+            text: '关闭',
+            callback:(toast)=>{
+              toast.close();
+            }
+          }
+        }
       }
     },
     mounted() {
@@ -29,6 +43,10 @@
       close(){
         this.$el.remove();
         this.$destroy()
+      },
+      onClickClose(){
+        this.close();
+        this.closeButton.callback();
       }
     }
   }
@@ -39,19 +57,23 @@
   $toast-min-height: 40px;
   $toast-bg: rgba(0, 0, 0, 0.75);
   .toast {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: $font-size;
-    min-height: $toast-min-height;
-    display: flex;
-    line-height: 1.8;
-    color: white;
-    align-items: center;
-    background: $toast-bg;
-    border-radius: 4px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
-    padding: 0 16px;
+    position: fixed; top: 10px; left: 50%; transform: translateX(-50%); font-size: $font-size;
+    min-height: $toast-min-height; display: flex; line-height: 1.8; color: white;
+    align-items: center; background: $toast-bg; border-radius: 4px; box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
+    .content{
+      border-right: 1px solid #666;
+      padding: 4px 16px;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+    }
+    .button{
+      cursor: pointer;
+      flex-shrink: 0;
+      align-self: stretch;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+    }
   }
 </style>
