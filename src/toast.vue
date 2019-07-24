@@ -15,12 +15,11 @@
     name: "z-toast",
     props: {
       autoClose: {
-        type: Boolean,
-        default: true
-      },
-      autoCloseDelay: {
-        type: Number,
-        default: 3
+        type: [Boolean, Number],
+        default: 5,
+        validator(value){
+          return value === false || typeof value === 'number'
+        }
       },
       closeButton: {
         type: Object,
@@ -49,11 +48,11 @@
       }
     },
     mounted() {
-      let {autoClose, close, autoCloseDelay} = this;
+      let {autoClose, close} = this;
       if (autoClose) {
         setTimeout(() => {
           close();
-        }, autoCloseDelay * 1000)
+        }, autoClose * 1000)
       }
     },
     methods: {
@@ -61,9 +60,6 @@
         this.$el.remove();
         this.$emit('beforeClose');
         this.$destroy()
-      },
-      log() {
-        console.log('测试')
       },
       onClickClose() {
         this.close();
