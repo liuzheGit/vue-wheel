@@ -43,7 +43,18 @@ new Vue({
       console.log(event.target.value)
     },
     showToast(){
-      this.$toast('我是toast')
+      this.$toast('<p>多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字<strong>加粗</strong></p>', {
+        propsData: {
+          closeButton: {
+            text: '知道了111',
+            callback(toast){
+              console.log('用户说它知道了111');
+              toast.log()
+            }
+          },
+          enableHtml: true
+        }
+      })
     }
   }
 });
