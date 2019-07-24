@@ -21,6 +21,8 @@
 <style scoped lang="scss">
   .aside{
     position: relative;
+    background-color: cornflowerblue;
+    width: 200px;
     .close{
       position: absolute;
       top: 0;

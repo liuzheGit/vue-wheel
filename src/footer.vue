@@ -11,5 +11,7 @@
 </script>
 
 <style scoped>
-
+  .footer{
+    background-color: rosybrown;
+  }
 </style>

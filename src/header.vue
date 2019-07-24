@@ -11,5 +11,7 @@
 </script>
 
 <style scoped>
-
+  .header{
+    background-color: gray;
+  }
 </style>
