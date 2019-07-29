@@ -41,8 +41,28 @@
   .demo{
     min-height: 100px;
   }
+  .section:not(:first-child){
+    display: none;
+  }
 </style>
 <div id="app">
+  <div class="section">
+    <z-tabs :selected.sync="selectedTab">
+      <z-tabs-head>
+        <z-tabs-item name="lol">英雄联盟</z-tabs-item>
+        <z-tabs-item name="pubg">绝地求生</z-tabs-item>
+        <z-tabs-item name="ov">守望先锋</z-tabs-item>
+        <template slot="action">
+          <button>设置</button>
+        </template>
+      </z-tabs-head>
+      <z-tabs-body>
+        <z-tabs-pane name="lol">lol相关</z-tabs-pane>
+        <z-tabs-pane name="pubg">pubg相关</z-tabs-pane>
+        <z-tabs-pane name="ov">overwatch相关</z-tabs-pane>
+      </z-tabs-body>
+    </z-tabs>
+  </div>
   <div class="section">
     <h3>Toast</h3>
     <button @click="showToast1">top</button>

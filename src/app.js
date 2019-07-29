@@ -10,6 +10,11 @@ import content from './content'
 import header from './header'
 import footer from './footer'
 import aside from './aside'
+import tabs from './tab/tabs'
+import tabsHead from './tab/tabs-head'
+import tabsItem from './tab/tabs-item'
+import tabsBody from './tab/tabs-body'
+import tabsPane from './tab/tabs-pane'
 
 import './iconfont-svg'
 
@@ -26,6 +31,11 @@ Vue.component('z-header', header)
 Vue.component('z-footer', footer)
 Vue.component('z-aside', aside)
 
+Vue.component('z-tabs', tabs)
+Vue.component('z-tabs-head', tabsHead)
+Vue.component('z-tabs-item', tabsItem)
+Vue.component('z-tabs-body', tabsBody)
+Vue.component('z-tabs-pane', tabsPane)
 
 // Toast
 import plugin from './plugin'
@@ -37,7 +47,8 @@ new Vue({
     msg: 'hello',
     up: 'up',
     loading1: true,
-    loading2: false
+    loading2: false,
+    selectedTab: 'ov'
   },
   methods: {
     inputEvent(event) {
