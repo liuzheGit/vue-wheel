@@ -15,7 +15,6 @@
       }
     },
     mounted() {
-      console.log(this.$children);
       this.$children.forEach((vm)=>{
         if(vm.$options.name === 'z-aside'){
           this.layoutClass.hasAside = true

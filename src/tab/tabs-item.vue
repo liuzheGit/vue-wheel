@@ -26,9 +26,8 @@
     },
     inject: ['eventBus'],
     created() {
-      this.eventBus.$on('update:selected', (data, vm) => {
+      this.eventBus.$on('update:selected', (data) => {
         this.active = data === this.name;
-        console.log(vm)
       })
     },
     methods: {

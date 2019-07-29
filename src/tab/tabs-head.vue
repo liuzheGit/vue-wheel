@@ -4,7 +4,7 @@
     <div class="actions">
       <slot name="action"></slot>
     </div>
-    <div class="line"></div>
+    <div class="line" ref="line"></div>
   </div>
 </template>
 
@@ -12,7 +12,14 @@
   export default {
     name: "z-tabs-head",
     inject: ['eventBus'],
-    created(){
+    mounted(){
+      this.eventBus.$on('update:selected', (data,vm)=>{
+        let {width, left } = vm.$el.getBoundingClientRect();
+        let lineParent = this.$refs.line.parentNode.getBoundingClientRect();
+        let offsetWidth = lineParent.left;
+        this.$refs.line.style.width = `${width}px`;
+        this.$refs.line.style.left = `${left - offsetWidth}px`;
+      })
     }
   }
 </script>
@@ -31,7 +38,8 @@
       position: absolute;
       bottom: 0;
       width: 100px;
-      border-bottom: 1px solid green;
+      border-bottom: 1px solid blue;
+      transition: all 350ms;
     }
   }
 </style>
