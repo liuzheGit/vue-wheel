@@ -15,6 +15,6 @@
 
 <style scoped>
   .tabs-body{
-
+    padding: 1em;
   }
 </style>

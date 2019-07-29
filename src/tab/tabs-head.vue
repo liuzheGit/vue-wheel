@@ -26,11 +26,14 @@
 
 <style scoped lang="scss">
   $tabs-height: 40px;
+  $line-color: blue;
+  $border-color: #ddd;
   .tabs-head{
     display: flex;
     align-items: center;
     height: $tabs-height;
     position: relative;
+    border-bottom: 1px solid $border-color;
     > .actions{
       margin-left: auto;
     }
@@ -38,7 +41,7 @@
       position: absolute;
       bottom: 0;
       width: 100px;
-      border-bottom: 1px solid blue;
+      border-bottom: 1px solid $line-color;
       transition: all 350ms;
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs-item" @click="xxx" :class="classes">
+  <div class="tabs-item" @click="changeItem" :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -15,12 +15,16 @@
     props: {
       name: {
         require: true
+      },
+      disabled: {
+        type: Boolean
       }
     },
     computed: {
       classes() {
         return {
-          active: this.active
+          active: this.active,
+          disabled: this.disabled
         }
       }
     },
@@ -31,7 +35,8 @@
       })
     },
     methods: {
-      xxx() {
+      changeItem() {
+        if(this.disabled){return }
         this.eventBus.$emit('update:selected', this.name, this)
       }
     }
@@ -40,6 +45,7 @@
 
 <style scoped lang="scss">
   $active-color: blue;
+  $disabled-text-color: gray;
   .tabs-item {
     cursor: pointer;
     padding: 0 1em;
@@ -49,6 +55,10 @@
     &.active {
       color: $active-color;
       font-weight: bold;
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: $disabled-text-color;
     }
   }
 </style>
