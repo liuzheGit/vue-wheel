@@ -5,8 +5,19 @@
 </template>
 
 <script>
+  import Vue from 'vue'
   export default {
     name: "z-tabs",
+    data(){
+      return {
+        eventBus: new Vue()
+      }
+    },
+    provide(){
+      return {
+        eventBus: this.eventBus
+      }
+    },
     props: {
       selected: {
         type: String,
@@ -19,8 +30,8 @@
         }
       }
     },
-    created(){
-      this.$emit('update:selected', '')
+    mounted(){
+        this.eventBus.$emit('update:selected', this.selected)
     }
   }
 </script>

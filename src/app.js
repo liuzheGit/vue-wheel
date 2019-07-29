@@ -51,6 +51,9 @@ new Vue({
     selectedTab: 'ov'
   },
   methods: {
+    yyy(){
+      console.log('tabs的监听@update:selected触发了')
+    },
     inputEvent(event) {
       console.log(event.target.value)
     },
