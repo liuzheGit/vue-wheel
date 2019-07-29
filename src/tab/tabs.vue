@@ -31,7 +31,16 @@
       }
     },
     mounted(){
-        this.eventBus.$emit('update:selected', this.selected)
+      console.log(this.$children);
+      this.$children.forEach((vm)=>{
+        if(vm.$options.name === 'z-tabs-head'){
+          vm.$children.forEach((childVm)=>{
+            if(childVm.$options.name === 'z-tabs-item' && childVm.name === this.selected){
+              this.eventBus.$emit('update:selected', this.selected, childVm)
+            }
+          })
+        }
+      });
     }
   }
 </script>

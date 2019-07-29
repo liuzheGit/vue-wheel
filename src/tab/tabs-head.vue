@@ -4,6 +4,7 @@
     <div class="actions">
       <slot name="action"></slot>
     </div>
+    <div class="line"></div>
   </div>
 </template>
 
@@ -22,9 +23,15 @@
     display: flex;
     align-items: center;
     height: $tabs-height;
-    border: 1px solid red;
+    position: relative;
     > .actions{
       margin-left: auto;
+    }
+    > .line{
+      position: absolute;
+      bottom: 0;
+      width: 100px;
+      border-bottom: 1px solid green;
     }
   }
 </style>
