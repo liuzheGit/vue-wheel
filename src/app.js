@@ -16,6 +16,9 @@ import tabsItem from './tab/tabs-item'
 import tabsBody from './tab/tabs-body'
 import tabsPane from './tab/tabs-pane'
 
+import collapse from './collapse'
+import collapseItem from './collapse-item'
+
 import './iconfont-svg'
 
 Vue.component('z-button', button);
@@ -36,7 +39,8 @@ Vue.component('z-tabs-head', tabsHead)
 Vue.component('z-tabs-item', tabsItem)
 Vue.component('z-tabs-body', tabsBody)
 Vue.component('z-tabs-pane', tabsPane)
-
+Vue.component('z-collapse', collapse)
+Vue.component('z-collapse-item', collapseItem)
 // Toast
 import plugin from './plugin'
 
