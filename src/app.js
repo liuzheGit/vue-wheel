@@ -48,6 +48,7 @@ Vue.use(plugin);
 new Vue({
   el: '#app',
   data: {
+    collapseSelected: [],
     msg: 'hello',
     up: 'up',
     loading1: true,
