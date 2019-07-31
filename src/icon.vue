@@ -11,9 +11,6 @@
   }
 </script>
 
-<style scoped lang="sass">
-
-  .z-icon
-    width: 1em
-    height: 1em
+<style scoped lang="scss">
+  .z-icon{ width: 1em; height: 1em; }
 </style>
