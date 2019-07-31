@@ -1,25 +1,39 @@
+// const path = require('path')
 module.exports = {
-  title: '轱辘UI',
-  description: '一个好用的UI框架',
+  base: '/zui/',
+  title: 'ZUI',
+  description: '一个好用的UI框架(Vue)',
   themeConfig: {
     nav: [
       {text: '主页', link: '/'},
-      {text: '文档', link: '/guide/'},
+      // {text: '文档', link: '/guide/'},
       {text: '交流', link: 'https://google.com'},
     ],
     sidebar: [
       {
-        title: '入门1',
+        title: '入门',
+        collapsable: false,
         children: [
-          '/install/',
-          '/get-start/',
+          '/Install/',
+          '/Start/',
         ]
       },
       {
         title: '组件',
-        children: ['/components/button']
+        collapsable: false,
+        children: [
+          '/components/button',
+          '/components/tabs',
+          '/components/input',
+          '/components/grid',
+          '/components/layout',
+          '/components/toast'
+        ]
       },
 
     ]
-  }
+  },
+  // scss:{
+  //   includePaths: [path.join(__dirname, '../../styles')]
+  // }
 }
