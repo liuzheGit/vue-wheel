@@ -1,19 +1,19 @@
 <template>
-  <div style="padding-top: 16px;">
+  <div style="paddinz-top: 16px;">
     <h2>简单用法</h2>
     <p>
       <strong>预览</strong>
     </p>
-    <g-tabs :selected="selected">
-      <g-tabs-head>
-        <g-tabs-item name="1">1</g-tabs-item>
-        <g-tabs-item name="2">2</g-tabs-item>
-      </g-tabs-head>
-      <g-tabs-body>
-        <g-tabs-pane name="1">content 1</g-tabs-pane>
-        <g-tabs-pane name="2">content 2</g-tabs-pane>
-      </g-tabs-body>
-    </g-tabs>
+    <z-tabs :selected="selected">
+      <z-tabs-head>
+        <z-tabs-item name="1">1</z-tabs-item>
+        <z-tabs-item name="2">2</z-tabs-item>
+      </z-tabs-head>
+      <z-tabs-body>
+        <z-tabs-pane name="1">content 1</z-tabs-pane>
+        <z-tabs-pane name="2">content 2</z-tabs-pane>
+      </z-tabs-body>
+    </z-tabs>
 
     <p>
       <strong>代码</strong>
@@ -22,14 +22,14 @@
   </div>
 </template>
 <script>
-  import GTabs from '../../../src/tab/tabs'
-  import GTabsBody from '../../../src/tab/tabs-body'
-  import GTabsHead from '../../../src/tab/tabs-head'
-  import GTabsItem from '../../../src/tab/tabs-item'
-  import GTabsPane from '../../../src/tab/tabs-pane'
+  import ZTabs from '../../../src/tab/tabs'
+  import ZTabsBody from '../../../src/tab/tabs-body'
+  import ZTabsHead from '../../../src/tab/tabs-head'
+  import ZTabsItem from '../../../src/tab/tabs-item'
+  import ZTabsPane from '../../../src/tab/tabs-pane'
 
   export default {
-    components: {GTabs, GTabsBody, GTabsHead, GTabsItem, GTabsPane},
+    components: {ZTabs, ZTabsBody, ZTabsHead, ZTabsItem, ZTabsPane},
     data () {
       return {
         selected: '1',
@@ -38,16 +38,16 @@
             selected: '1'
           }
 
-          <g-tabs :selected="selected">
-            <g-tabs-head>
-              <g-tabs-item name="1">1</g-tabs-item>
-              <g-tabs-item name="2">2</g-tabs-item>
-            </g-tabs-head>
-            <g-tabs-body>
-              <g-tabs-pane name="1">content 1</g-tabs-pane>
-              <g-tabs-pane name="2">content 2</g-tabs-pane>
-            </g-tabs-body>
-          </g-tabs>
+          <z-tabs :selected="selected">
+            <z-tabs-head>
+              <z-tabs-item name="1">1</z-tabs-item>
+              <z-tabs-item name="2">2</z-tabs-item>
+            </z-tabs-head>
+            <z-tabs-body>
+              <z-tabs-pane name="1">content 1</z-tabs-pane>
+              <z-tabs-pane name="2">content 2</z-tabs-pane>
+            </z-tabs-body>
+          </z-tabs>
       `.replace(/^ {8}/gm, '').trim()
       }
     }

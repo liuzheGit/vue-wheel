@@ -4,10 +4,10 @@
     <p>
       <strong>预览</strong>
     </p>
-    <g-button>默认按钮</g-button>
-    <g-button icon="setting">默认按钮</g-button>
-    <g-button :loading="true">默认按钮</g-button>
-    <g-button disabled>默认按钮</g-button>
+    <z-button>默认按钮</z-button>
+    <z-button icon="setting">icon按钮</z-button>
+    <z-button :loading="true">loading按钮</z-button>
+    <z-button disabled>禁用按钮</z-button>
 
     <p>
       <strong>代码</strong>
@@ -21,15 +21,15 @@
 
   export default {
     components: {
-      'g-button': Button
+      'z-button': Button
     },
     data () {
       return {
         content: `
-          <g-button>默认按钮</g-button>
-          <g-button icon="settings">默认按钮</g-button>
-          <g-button :loading="true">默认按钮</g-button>
-          <g-button disabled>默认按钮</g-button>
+          <z-button>默认按钮</z-button>
+          <z-button icon="setting">icon按钮</z-button>
+          <z-button :loading="true">loading</z-button>
+          <z-button disabled>禁用按钮</z-button>
       `.replace(/^ {8}/gm, '').trim()
       }
     }

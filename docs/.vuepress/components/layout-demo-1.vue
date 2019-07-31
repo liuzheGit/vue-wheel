@@ -5,17 +5,17 @@
       <strong>预览</strong>
     </p>
 
-    <g-layout style="color: white; margin-bottom:50px;">
-      <g-header style="height: 50px; background:lightskyblue;">
+    <z-layout style="color: white; margin-bottom:50px;">
+      <z-header style="height: 50px; background:lightskyblue;">
         header
-      </g-header>
-      <g-content style="height: 100px; background:deepskyblue;">
+      </z-header>
+      <z-content style="height: 100px; background:deepskyblue;">
         content
-      </g-content>
-      <g-footer style="height: 50px; background:lightskyblue;">
+      </z-content>
+      <z-footer style="height: 50px; background:lightskyblue;">
         footer
-      </g-footer>
-    </g-layout>
+      </z-footer>
+    </z-layout>
 
     <p>
       <strong>代码</strong>
@@ -29,28 +29,28 @@
   }
 </style>
 <script>
-  import GLayout from '../../../src/layout'
-  import GHeader from '../../../src/header'
-  import GFooter from '../../../src/footer'
-  import GContent from '../../../src/content'
-  import GSider from '../../../src/aside'
+  import ZLayout from '../../../src/layout'
+  import ZHeader from '../../../src/header'
+  import ZFooter from '../../../src/footer'
+  import ZContent from '../../../src/content'
+  import ZSider from '../../../src/aside'
 
   export default {
-    components: {GLayout, GHeader, GFooter, GContent, GSider},
+    components: {ZLayout, ZHeader, ZFooter, ZContent, ZSider},
     data () {
       return {
         content: `
-          <g-layout style="color: white; margin-bottom:50px;">
-            <g-header style="height: 50px; background:lightskyblue;">
+          <z-layout style="color: white; margin-bottom:50px;">
+            <z-header style="height: 50px; background:lightskyblue;">
               header
-            </g-header>
-            <g-content style="height: 100px; background:deepskyblue;">
+            </z-header>
+            <z-content style="height: 100px; background:deepskyblue;">
               content
-            </g-content>
-            <g-footer style="height: 50px; background:lightskyblue;">
+            </z-content>
+            <z-footer style="height: 50px; background:lightskyblue;">
               footer
-            </g-footer>
-          </g-layout>
+            </z-footer>
+          </z-layout>
 
       `.replace(/^ {8}/gm, '').trim()
       }

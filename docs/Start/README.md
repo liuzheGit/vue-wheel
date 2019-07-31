@@ -15,13 +15,13 @@ title: 快速上手
 ## Hello World
 
 ```javascript
-import {Button} from 'gulu'
+import {Button} from 'ZUI'
 import Vue from 'vue'
 
 new Vue({
   el: '#app',
   components: {
-    'g-button':Button
+    'z-button':Button
   }
 })
 ```

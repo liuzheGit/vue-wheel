@@ -1,6 +1,6 @@
 // const path = require('path')
 module.exports = {
-  base: '/zui/',
+  base: '/vue-wheel/',
   title: 'ZUI',
   description: '一个好用的UI框架(Vue)',
   themeConfig: {

@@ -4,59 +4,59 @@
     <p>
       <strong>预览</strong>
     </p>
-    <g-row class="demoRow" gutter="10">
-      <g-col span="8">
+    <z-row class="demoRow" gutter="10">
+      <z-col span="8">
         <div class="demoCol">8</div>
-      </g-col>
-      <g-col span="8" offset="8">
+      </z-col>
+      <z-col span="8" offset="8">
         <div class="demoCol">8</div>
-      </g-col>
-    </g-row>
-    <g-row class="demoRow" gutter="10">
-      <g-col span="6" offset="6">
+      </z-col>
+    </z-row>
+    <z-row class="demoRow" gutter="10">
+      <z-col span="6" offset="6">
         <div class="demoCol">6</div>
-      </g-col>
-      <g-col span="6" offset="6">
+      </z-col>
+      <z-col span="6" offset="6">
         <div class="demoCol">6</div>
-      </g-col>
-    </g-row>
-    <g-row class="demoRow" gutter="10">
-      <g-col span="4">
+      </z-col>
+    </z-row>
+    <z-row class="demoRow" gutter="10">
+      <z-col span="4">
         <div class="demoCol">4</div>
-      </g-col>
-      <g-col span="4" offset="4">
+      </z-col>
+      <z-col span="4" offset="4">
         <div class="demoCol">4</div>
-      </g-col>
-      <g-col span="4" offset="8">
+      </z-col>
+      <z-col span="4" offset="8">
         <div class="demoCol">4</div>
-      </g-col>
-    </g-row>
-    <g-row class="demoRow" gutter="10">
-      <g-col span="2">
+      </z-col>
+    </z-row>
+    <z-row class="demoRow" gutter="10">
+      <z-col span="2">
         <div class="demoCol">2</div>
-      </g-col>
-      <g-col span="2" offset="2">
+      </z-col>
+      <z-col span="2" offset="2">
         <div class="demoCol">2</div>
-      </g-col>
-      <g-col span="2">
+      </z-col>
+      <z-col span="2">
         <div class="demoCol">2</div>
-      </g-col>
-      <g-col span="2" offset="2">
+      </z-col>
+      <z-col span="2" offset="2">
         <div class="demoCol">2</div>
-      </g-col>
-      <g-col span="2">
+      </z-col>
+      <z-col span="2">
         <div class="demoCol">2</div>
-      </g-col>
-      <g-col span="2" offset="2">
+      </z-col>
+      <z-col span="2" offset="2">
         <div class="demoCol">2</div>
-      </g-col>
-      <g-col span="2">
+      </z-col>
+      <z-col span="2">
         <div class="demoCol">2</div>
-      </g-col>
-      <g-col span="2" offset="2">
+      </z-col>
+      <z-col span="2" offset="2">
         <div class="demoCol">2</div>
-      </g-col>
-    </g-row>
+      </z-col>
+    </z-row>
 
     <p>
       <strong>代码</strong>
@@ -81,11 +81,11 @@
   }
 </style>
 <script>
-  import GRow from '../../../src/grid/row'
-  import GCol from '../../../src/grid/col'
+  import ZRow from '../../../src/grid/row'
+  import ZCol from '../../../src/grid/col'
 
   export default {
-    components: {GRow, GCol},
+    components: {ZRow, ZCol},
     data () {
       return {
         content: `
@@ -93,59 +93,59 @@
             box-sizing: border-box;
           }
 
-          <g-row class="demoRow" gutter="10">
-            <g-col span="8">
+          <z-row class="demoRow" gutter="10">
+            <z-col span="8">
               <div class="demoCol">8</div>
-            </g-col>
-            <g-col span="8" offset="8">
+            </z-col>
+            <z-col span="8" offset="8">
               <div class="demoCol">8</div>
-            </g-col>
-          </g-row>
-          <g-row class="demoRow" gutter="10">
-            <g-col span="6" offset="6">
+            </z-col>
+          </z-row>
+          <z-row class="demoRow" gutter="10">
+            <z-col span="6" offset="6">
               <div class="demoCol">6</div>
-            </g-col>
-            <g-col span="6" offset="6">
+            </z-col>
+            <z-col span="6" offset="6">
               <div class="demoCol">6</div>
-            </g-col>
-          </g-row>
-          <g-row class="demoRow" gutter="10">
-            <g-col span="4">
+            </z-col>
+          </z-row>
+          <z-row class="demoRow" gutter="10">
+            <z-col span="4">
               <div class="demoCol">4</div>
-            </g-col>
-            <g-col span="4" offset="4">
+            </z-col>
+            <z-col span="4" offset="4">
               <div class="demoCol">4</div>
-            </g-col>
-            <g-col span="4" offset="8">
+            </z-col>
+            <z-col span="4" offset="8">
               <div class="demoCol">4</div>
-            </g-col>
-          </g-row>
-          <g-row class="demoRow" gutter="10">
-            <g-col span="2">
+            </z-col>
+          </z-row>
+          <z-row class="demoRow" gutter="10">
+            <z-col span="2">
               <div class="demoCol">2</div>
-            </g-col>
-            <g-col span="2" offset="2">
+            </z-col>
+            <z-col span="2" offset="2">
               <div class="demoCol">2</div>
-            </g-col>
-            <g-col span="2">
+            </z-col>
+            <z-col span="2">
               <div class="demoCol">2</div>
-            </g-col>
-            <g-col span="2" offset="2">
+            </z-col>
+            <z-col span="2" offset="2">
               <div class="demoCol">2</div>
-            </g-col>
-            <g-col span="2">
+            </z-col>
+            <z-col span="2">
               <div class="demoCol">2</div>
-            </g-col>
-            <g-col span="2" offset="2">
+            </z-col>
+            <z-col span="2" offset="2">
               <div class="demoCol">2</div>
-            </g-col>
-            <g-col span="2">
+            </z-col>
+            <z-col span="2">
               <div class="demoCol">2</div>
-            </g-col>
-            <g-col span="2" offset="2">
+            </z-col>
+            <z-col span="2" offset="2">
               <div class="demoCol">2</div>
-            </g-col>
-          </g-row>
+            </z-col>
+          </z-row>
       `.replace(/^ {8}/gm, '').trim()
       }
     }

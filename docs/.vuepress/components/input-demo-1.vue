@@ -4,9 +4,9 @@
     <p>
       <strong>预览</strong>
     </p>
-    <g-input value="中文"></g-input>
-    <g-input value="中文" disabled></g-input>
-    <g-input value="中文" readonly></g-input>
+    <z-input value="中文"></z-input>
+    <z-input value="中文" disabled></z-input>
+    <z-input value="中文" readonly></z-input>
 
     <p>
       <strong>代码</strong>
@@ -15,18 +15,18 @@
   </div>
 </template>
 <script>
-  import GInput from '../../../src/input'
+  import ZInput from '../../../src/input'
 
   export default {
-    components: {GInput},
+    components: {ZInput},
     data () {
       return {
         selected: '1',
         content: `
-          <g-input></g-input>
-          <g-input value="中文"></g-input>
-          <g-input value="中文" disabled></g-input>
-          <g-input value="中文" readonly></g-input>
+          <z-input></z-input>
+          <z-input value="中文"></z-input>
+          <z-input value="中文" disabled></z-input>
+          <z-input value="中文" readonly></z-input>
       `.replace(/^ {8}/gm, '').trim()
       }
     }
